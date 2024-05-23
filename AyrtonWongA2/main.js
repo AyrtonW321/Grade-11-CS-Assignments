@@ -453,7 +453,22 @@ function runTest() {
     name.value = 'Timothée Chalamet';
     studentNum.value = '341146421';
     grade.value = '9';
-    position.value = 'President';
+    position.value = 'Co-President';
     picture.value = 'timothee.webp';
-    message.value = 'Hi!!! My name is Timothee? Chalamet.. Number 2. Hi';
+    message.value = 'Hi!!! My name is Timothee? Chalamet.. 10928120. Hi';
+}
+
+function runTest2(){
+    const name = document.getElementById('nameInput');
+    const studentNum = document.getElementById('studentNumInput');
+    const grade = document.getElementById('gradeInput');
+    const position = document.getElementById('positionInput');
+    const picture = document.getElementById('pictureInput');
+    const message = document.getElementById('messageInput');
+    name.value = 'Scarlett Johansson';
+    studentNum.value = '124641143';
+    grade.value = '12';
+    position.value = 'Logistics';
+    picture.value = 'scarlett.jpg';
+    message.value = 'Hi!!! My name is Scarlett?.. 10928120...............';
 }
