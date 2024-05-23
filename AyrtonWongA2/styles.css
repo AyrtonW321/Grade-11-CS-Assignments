@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbf1ff;
+    border-bottom: 2px solid black;
+}
+
+.addCandidate {
+    display: flex;
+
+    width: 45%;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.addCandidate #exit {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.addCandidate #exit:hover {
+    border-top-right-radius: 3px;
+    background-color: rgb(255, 47, 47);
+}
+
+.container {
+    padding: 28px;
+    margin: 0 28px;
+
+    background: #f2f2f2;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+
+    position: relative;
+}
+
+.container h2 {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+
+    color: black;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.inputBox:nth-child(2n) {
+    justify-content: end;
+}
+
+.inputBox label {
+    width: 95%;
+    color: black;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.inputBox input,
+select {
+    height: 40px;
+    width: 90%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.inputBox input:is(:focus) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox select {
+    width: 96%;
+}
+
+.inputBox select:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttonContainer {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.buttonContainer button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    background-color: #3a5bef;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttonContainer button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 20px 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.btn:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+#addCandidate {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#addCandidate:hover {
+    background-color: #3a5bef;
+    color: white;
+}
+
+#viewCandidate {
+    position: absolute;
+    bottom: 10px;
+    left: 180px;
+}
+
+#viewCandidate:hover {
+    background-color: #3a5bef;
+    color: white;
+}
+
+#finishVoting {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#finishVoting:hover {
+    background-color: #14ff0c;
+}
+
+.candidateContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.candidate {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.candidate h3 {
+    margin-bottom: 5px;
+}
+
+.candidate img {
+    width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.candidate:hover {
+    opacity: 0.8;
+}
+
+.viewCandidate {
+    background-color: #f2f2f2;
+    min-width: 600px;
+    min-height: 700px;
+
+    border-radius: 3px;
+    border: 2px solid black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.viewCandidate hr {
+    margin: 15px 10px;
+}
+
+.viewCandidate h4 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+
+    color: black;
+
+    padding-top: 4.5px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid silver;
+}
+
+.viewCandidate h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+
+    color: black;
+
+    padding-top: 4.5px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.viewCandidate #exitView {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.viewCandidate #exitView:hover {
+    border-top-right-radius: 3px;
+    background-color: rgb(255, 47, 47);
+}
+
+.candidateImgContainer {
+    background-color: #e4e3e3;
+    width: 30%;
+    margin: auto;
+}
+
+.candidateImgContainer img {
+    width: 100%;
+    max-height: 250px;
+}
+
+.candidateInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewCandidate .candidateText {
+    font-size: 17px;
+    text-align: left;
+
+    color: black;
+
+    margin-right: 10px;
+
+    padding-top: 4.5px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.candidateText:last-child {
+    margin-right: 0;
+}
+
+.viewCandidate #edit {
+    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 10px 20px;
+    min-width: 60px;
+    text-align: center;
+
+    position: absolute;
+    right: 150px;
+    bottom: 10px;
+}
+
+.viewCandidate #edit:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    background-color: #14ff0c;
+}
+
+.viewCandidate .vote {
+    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 20px 40px;
+    min-width: 60px;
+    text-align: center;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.viewCandidate .vote:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    background-color: #14ff0c;
+}
+
+.viewCandidate .transverseButtons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.transverseButtons button {
+    background-color: #3a5bef;
+    color: white;
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 10px 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.transverseButtons button:hover {
+    background-color: #414141;
+}

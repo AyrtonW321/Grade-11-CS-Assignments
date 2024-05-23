@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>RGSS Studen Council Voting</title>
+</head>
+
+<body>
+    <div class="bar">
+        <h1>
+            Richmond Green Student Representative Voting
+        </h1>
+    </div>
+
+    <div class="addCandidate" style="display: none;">
+        <div class="container">
+            <button id="exit" onclick="toggleAddCandidateForm();">x</button>
+
+            <h2>
+                Add Candidate
+            </h2>
+            <div class="content">
+                <div class="inputBox">
+                    <Label for="nameInput">Name:</Label>
+                    <input type="text" id="nameInput" placeholder="Enter Full Name" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <Label for="studentNumInput">Student Number:</Label>
+                    <input type="number" id="studentNumInput" placeholder="Enter Student Number" autocomplete="off"
+                        required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="gradeInput">Grade:</label>
+                    <input type="text" id="gradeInput" placeholder="Enter Grade" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="positionInput">Position</label>
+                    <select id="positionInput">
+                        <option value="President">President</option>
+                        <option value="Co-President">Co-President</option>
+                        <option value="Grade Representative">Grade Representative</option>
+                        <option value="General Executive">General Executive</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Logistics">Logistics</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <Label for="pictureInput">Picture:</Label>
+                    <input type="text" id="pictureInput" placeholder="Enter Picture URL" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="messageInput">Message</label>
+                    <input type="text" id="messageInput" placeholder="Message" autocomplete="off">
+                </div>
+
+                <div class="buttonContainer">
+                    <button onclick="addNewCandidate();">Add Candidate</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="addCandidate" id="editCandidate" style="display: none;">
+        <div class="container">
+            <button id="exit" onclick="hideEdit();">x</button>
+
+            <h2>
+                Edit Candidate
+            </h2>
+            <div class="content">
+                <div class="inputBox">
+                    <Label for="nameEdit">Name:</Label>
+                    <input type="text" id="nameEdit" placeholder="Enter Full Name" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <Label for="studentNumEdit">Student Number:</Label>
+                    <input type="text" id="studentNumEdit" placeholder="Enter Student Number" autocomplete="off"
+                        required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="gradeEdit">Grade:</label>
+                    <input type="text" id="gradeEdit" placeholder="Enter Grade" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="positionEdit">Position</label>
+                    <select id="positionEdit">
+                        <option value="President">President</option>
+                        <option value="Co-President">Co-President</option>
+                        <option value="Grade Representative">Grade Representative</option>
+                        <option value="General Executive">General Executive</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Logistics">Logistics</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <Label for="pictureEdit">Picture:</Label>
+                    <input type="text" id="pictureEdit" placeholder="Enter Picture URL" autocomplete="off" required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="messageEdit">Message</label>
+                    <input type="text" id="messageEdit" placeholder="Message" autocomplete="off">
+                </div>
+
+                <div class="buttonContainer">
+                    <button onclick="editCandidate();">Edit Candidate</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="viewCandidate" style="display: none;">
+        <button id="exitView" onclick="hideViewCandidate()">x</button>
+        <h4 class="candidateTitle" id="candidateTitle">Candidate</h4>
+        <h1 id="name"></h1>
+
+        <div class="candidateImgContainer">
+            <img class="candidateImg" id="picture" src="" alt="Image of Candidate" />
+        </div>
+
+        <hr>
+
+        <div class="candidateInfo">
+            <div class="candidateText">
+                <b>Grade: </b>
+                <p id="grade"></p>
+            </div>
+            <div class="candidateText">
+                <b>Position: </b>
+                <p id="position"></p>
+            </div>
+            <div class="candidateText">
+                <b>Student Number: </b>
+                <p id="number"></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="candidateText">
+            <b>Message: </b>
+            <p id="message"></p>
+        </div>
+
+        <hr>
+
+        <div class="candidateText">
+            <b>Number of Votes: </b>
+            <p id="numOfVotes"></p>
+        </div>
+
+        <div class="transverseButtons">
+            <button id="previous">
+                < </button>
+
+                    <button id="next">
+                        >
+                    </button>
+        </div>
+
+        <button id="edit" onclick="showEditCandidate(currentCandidateIndex);">
+            Edit
+        </button>
+
+        <button class="vote" onclick="vote();">
+            Vote
+        </button>
+
+    </div>
+
+    <div class="candidateContainer">
+        <div class="candidate candidate1">
+            <h3>The Candidate 1</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate2">
+            <h3>The Candidate 2</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate3">
+            <h3>The Candidate 3</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate4">
+            <h3>The Candidate 4</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate5">
+            <h3>The Candidate 5</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate6">
+            <h3>The Candidate 6</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate7">
+            <h3>The Candidate 7</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate8">
+            <h3>The Candidate 8</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate9">
+            <h3>The Candidate 9</h3>
+            <p></p>
+            <img src="" />
+        </div>
+        <div class="candidate candidate10">
+            <h3>The Candidate 10</h3>
+            <p></p>
+            <img src="" />
+        </div>
+    </div>
+
+    <button id="addCandidate" class="btn" onclick="toggleAddCandidateForm();">
+        Add Candidate
+    </button>
+
+    <button id="viewCandidate" class="btn" onclick="showViewCandidate();">
+        View Candidates
+    </button>
+
+    <button id="finishVoting" class="btn" onclick="finishVoting();">
+        Finish Voting
+    </button>
+
+    <div class="results">
+        <p id="results"></p>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>

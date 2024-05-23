@@ -1,0 +1,94 @@
+body {
+    font-family: 'Special Elite', sans-serif;
+    background-color: #deb887;
+}
+
+#pageNumber {
+    text-align: center;
+}
+
+#timer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.challengeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dragon-container {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#dragon-image {
+    width: 300px;
+    cursor: pointer;
+}
+
+#dragon-health-bar {
+    position: relative;
+    background-color: rgb(18, 224, 18);
+    top: -50px;
+}
+
+#crystals-container {
+    width: 100px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#crystal-1-image,
+#crystal-2-image,
+#crystal-3-image {
+    width: 100px;
+    margin: 0;
+}
+
+#user-health-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+    justify-content: center;
+    margin: 10px;
+}
+
+#user-health-bar {
+    margin-top: 0;
+}
+
+.container {
+    width: 50%;
+    position: absolute;
+    bottom: 25px;
+    left: 25%;
+
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10 auto;
+
+    text-align: center;
+    font-family: 'Special Elite', sans-serif;
+    font-size: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+}
+
+#exitButton {
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+    appearance: none;
+    background-color: inherit;
+    cursor: pointer;
+}

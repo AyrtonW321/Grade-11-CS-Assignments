@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3: Face the guardian!</title>
+    <link rel="stylesheet" href="challenge3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="pageNumber"></h1>
+    <b><p id="timer">Time Left: 30s</p></b>
+
+    <div class="challengeContainer">
+        <div id="dragon-container">
+            <img id="dragon-image" src="dragon.png" alt="Dragon">
+            <progress id="dragon-health-bar" value="50" max="50"></progress>
+        </div>
+
+        <div class="crystals">
+            <img id="crystal-1-image" src="crystal.png" alt="Crystal 1">
+            <img id="crystal-2-image" src="crystal.png" alt="Crystal 2">
+            <img id="crystal-3-image" src="crystal.png" alt="Crystal 3">
+        </div>
+        
+        <div id="user-health-container">
+            <p>Your Health:</p>
+            <progress id="user-health-bar" value="100" max="100"></progress>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p id="storyText"></p>
+    </div>
+
+    <button id="exitButton">
+        <image src="exit.png" class="button" />
+    </button>
+
+</body>
+<script src="challenge3.js"></script>
+
+</html>

@@ -1,0 +1,94 @@
+body {
+    background-color: #deb887;
+}
+
+#pageNumber {
+    text-align: center;
+    font-family: 'Special Elite', sans-serif;
+}
+
+.challengeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imprints img {
+    height: 100px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.imprints {
+    width: 50%;
+}
+
+#sunImprint {
+    position: absolute;
+    left: 30px;
+}
+
+#moonImprint {
+    position: absolute;
+    left: 600px;
+}
+
+#starImprint {
+    position: absolute;
+    left: 1100px;
+}
+
+#message {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16%;
+}
+
+
+#device {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.container {
+    width: 50%;
+    position: absolute;
+    bottom: 25px;
+    left: 25%;
+
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10 auto;
+
+    text-align: center;
+    font-family: 'Special Elite', sans-serif;
+    font-size: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+}
+
+#continueButton,
+#exitButton {
+    position: absolute;
+    border: none;
+    appearance: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#exitButton {
+    top: 0;
+    left: 0;
+}
+
+#continueButton {
+    bottom: 0;
+    right: 0;
+}

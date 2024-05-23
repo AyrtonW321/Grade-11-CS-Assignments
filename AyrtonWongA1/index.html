@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Lost Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "DM Serif Display", serif;
+            background-color: #deb887;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .startScreen {
+            text-align: center;
+        }
+
+        #game-title {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        #start-button {
+            font-size: 10px;
+            font-family: "DM Serif Display", serif;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 45px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        #start-button:hover {
+            background-color: #218c3f;
+        }
+
+        #game-title,
+        #start-button {
+            animation: zoomInOut 2s alternate infinite ease-in-out
+        }
+
+        @keyframes zoomInOut {
+            from {
+                font-size: 2.6em;
+            }
+
+            to {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="startScreen">
+        <h1 id="game-title">The Mystery of the Lost Library</h1>
+        <button id="start-button" onclick="start()">
+            Begin the Journey
+        </button>
+    </div>
+</body>
+<script>
+    let userName; // to store user name
+
+    // function will get the name of the user
+    function getUserName() {
+        // set a variable that holds the inputed value of a prompt
+        userName = prompt('Please enter your name');
+        // check for null input
+        if (userName == null || userName == 'null') { 
+            // exit early if prompt canceled
+            return; 
+        // if non-null input then store the users username
+        } else {
+            userName = String(userName);
+            localStorage.setItem('userName', userName);
+        }
+    }
+
+    function start() {
+        getUserName(); // run the getUsername function
+
+        // check for non-empty name 
+        if (userName !== "" && userName !== null) { 
+            // redirect if name entered
+            window.location.href = 'story.html'; 
+        // alert the user is they entered an empty name
+        } else {
+            alert('Please enter your name to begin the story!');
+        }
+    }
+</script>
+
+</html>

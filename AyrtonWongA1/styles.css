@@ -1,0 +1,61 @@
+body {
+    background-color: #deb887;
+}
+
+#pageNumber {
+    text-align: center;
+    font-family: 'Special Elite', sans-serif;
+}
+
+#storyImage {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.container {
+    width: 50%;
+    position: absolute;
+    bottom: 25px;
+    left: 25%;
+
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10 auto;
+
+    text-align: center;
+    font-family: 'Special Elite', sans-serif;
+    font-size: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+}
+
+#continueButton,
+#backButton,
+#exitButton {
+    position: absolute;
+    border: none;
+    appearance: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#exitButton {
+    top: 0;
+    left: 0;
+}
+
+#continueButton {
+    bottom: 0;
+    right: 0;
+}
+
+#backButton {
+    transform: rotateY(180deg);
+    bottom: 0;
+    left: 0;
+}
