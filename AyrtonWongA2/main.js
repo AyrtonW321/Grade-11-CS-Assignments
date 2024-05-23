@@ -191,7 +191,6 @@ function printCurrentCandidate() {
 }
 
 // Function to format the message
-// Doesn't work properly (attempted)
 function formatMessage(messageValue) {
     let formattedMessage = ""; // Empty string to hold the formatted message
     let startIndex = 0; // Start index at 0 in the beginning
